@@ -17,8 +17,6 @@ def find_max_num(number, length):
 
 
 joltage = 0
-number_length = 15
-total_length = 12
 
 for number in lines:
     final_number = ''
