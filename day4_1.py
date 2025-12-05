@@ -1,3 +1,8 @@
+with open('input/day4_1.txt') as f:
+    grid = [list(line.split('\n')[0])
+            for line in f.readlines()]
+
+
 def neighbour_count(grid, x, y):
     directions = [[-1, 0], [-1, -1], [0, -1], [-1, 1],
                   [1, 0], [1, 1], [0, 1], [1, -1]]
@@ -9,10 +14,6 @@ def neighbour_count(grid, x, y):
                 count += 1
     return count
 
-
-with open('input/day4_1.txt') as f:
-    grid = [list(line.split('\n')[0])
-            for line in f.readlines()]
 
 total = 0
 
