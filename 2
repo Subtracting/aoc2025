@@ -1,0 +1,32 @@
+with open('input/day6_1_test.txt') as f:
+    numbers = []
+    operators = []
+    for line in f.readlines():
+        if '+' in line:
+            operators.append(line.split())
+        else:
+            numbers.append(line)
+
+total = 0
+cols = len(operators[0])
+rows = len(numbers)
+print(numbers, operators)
+padding = [max([len(nums[col]) for nums in numbers])
+           for col in range(cols)]
+print(padding)
+
+# for col in range(cols):
+#     operator = operators[0][col]
+#     pad = padding[col]
+#     calc = 1 if operator == '*' else 0
+#     for nums in numbers:
+#         num = nums[col].zfill(pad)
+#         print(col, num)
+#         if operator == '+':
+#             calc += int(num)
+#         elif operator == '*':
+#             calc *= int(num)
+#     total += calc
+#
+
+print(total)
