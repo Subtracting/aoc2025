@@ -12,8 +12,6 @@ connections = 1000
 
 for j in range(len(nodes) - 1):
     fnode = nodes[j]
-    min_dist = 10**9
-    min_pair = []
     for i in range(j + 1, len(nodes)):
         nnode = nodes[i]
         if fnode != nnode:
